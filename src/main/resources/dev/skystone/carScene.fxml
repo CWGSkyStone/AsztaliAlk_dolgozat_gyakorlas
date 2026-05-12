@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" />
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.skystone.CarController">
+   <children>
+      <TableView fx:id="carTable" layoutX="40.0" layoutY="30.0" prefHeight="309.0" prefWidth="527.0">
+        <columns>
+          <TableColumn fx:id="licensePlateCol" prefWidth="75.0" text="Rendszám" />
+          <TableColumn fx:id="brandCol" prefWidth="75.0" text="Márka" />
+            <TableColumn fx:id="yearCol" prefWidth="67.0" text="Évjárat" />
+            <TableColumn fx:id="fuelTypeCol" prefWidth="73.0" text="Üzemanyag" />
+            <TableColumn fx:id="priceCol" prefWidth="114.0" text="Ár" />
+            <TableColumn fx:id="airConditioningCol" prefWidth="46.0" text="Klíma" />
+            <TableColumn fx:id="permitDateCol" prefWidth="75.0" text="Érvényesség" />
+        </columns>
+      </TableView>
+      <Button layoutX="255.0" layoutY="349.0" mnemonicParsing="false" onAction="#onClickBackButton" text="Vissza">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
