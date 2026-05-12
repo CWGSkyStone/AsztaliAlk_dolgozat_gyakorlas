@@ -22,7 +22,14 @@ public class App extends Application {
         stage.show();
     }
 
-    static void setRoot(String fxml) throws IOException {
+    static void setRoot(String fxml){
+        try {
+            trySetRoot(fxml);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    static void trySetRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
 
